@@ -71,67 +71,173 @@
     <link href="./css/navbar.css" rel="stylesheet">
         <link href="./css/modals.css" rel="stylesheet">
 
+    <link href="./css/Main.css" rel="stylesheet">
+    <link href="./css/Style.css" rel="stylesheet">
   </head>
   <body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">E-Tutor connect</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
 
-<main>
+                    E tutor
+                </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample03">
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Admissions</a>
+                    </li>
+                    <li class="nav-item">
+                        @*<a class="nav-link disabled">Our Learning</a>*@
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle active" dropdown-toggle" id="OurLearningDropdown" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">OurLearning</a>
+
+                            <div class="dropdown-menu" aria-labelledby="OurLearningDropdown">
+                                <a class="dropdown-item"href="#">Bank Details</a>
+                                <a class="dropdown-item" href="#">Code of conduct</a>
+                                <a class="dropdown-item" href="#">Staff</a>
+                              
 
 
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">E-Tutor connect</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon">
 
-            E tutor
-        </span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarsExample03">
-        <ul class="navbar-nav me-auto mb-2 mb-sm-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Learning and Teaching</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Research</a>
-          </li>
-          @*dropdown*@
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle"  data-bs-toggle="dropdown" aria-expanded="false" asp-controller="Home" asp-action="UserSelect">Users</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
-        <form role="search">
-          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-        </form>
-      </div>
-    </div>
-  </nav>
-
-        <div class="col">
-            <div class="card shadow-sm">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Welcome to the E-Tutoring system<br/>
-                    </text></svg>
-
-                <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            </div>
                         </div>
-                        <small class="text-muted">9 mins</small>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Contact us</a>
+                    <li class="nav-item">
+                        <a class="nav-link active">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active">Student Portal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Staff portal</a>
+                    </li>
+                    
+                    @*dropdown*@
+                    <li class="nav-item">
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle active" dropdown-toggle" id="Users" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">Users</a>
+
+                        <div class="dropdown-menu" aria-labelledby="Users">
+                            <a class="dropdown-item" href="#">HOD</a>
+                            <a class="dropdown-item" href="#">Subject coordinator</a>
+                            <a class="dropdown-item" href="#">Lecturer</a>
+                             <a class="dropdown-item" href="#">Student</a>
+                            <a class="dropdown-item" href="#">Sponsor</a>
+                       </div>
+                     </div>
+                     </li>
+                            
+
+
+                    
+                </ul>
+                <form role="search">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="=icon">
+        <h2 class="logo">Best Tutors you can trust</h2>
+    </div>
+
+    <header class="hero">
+
+        <div class="container spacing">
+            <h1 class="primary-title">Mission statement</h1>
+            <p>
+E-Tutor Connect strives to provide quality education within a caring environment that balances the pursuit of academic excellence and the development of life skills, so as to empower all of the learners to achieve their potential and meet the challenges of a dynamic society as responsible citizens.</p>
+            @*<a asp-controller="Home"asp-action="UserSelect" class="btn">Select users</a>*@
+            <br/>
+            <br/>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+                <div class="card shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Our System</text></svg>
+
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Select</button>
+
+
+                            </div>
+                            <small class="text-muted">9 Months</small>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Term Dates</text></svg>
+
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            </div>
+                            <small class="text-muted">9 mins</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Contact Us</text></svg>
+
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            </div>
+                            <small class="text-muted">9 mins</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Portal Login</text></svg>
+
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">Select</button>
+                            </div>
+                            <small class="text-muted">9 mins</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
+    </header>
+
+<main>
+    @*User selection*@
+
+
+
+
 
 
 

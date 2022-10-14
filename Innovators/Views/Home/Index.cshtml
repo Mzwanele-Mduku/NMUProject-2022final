@@ -91,7 +91,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Admissions</a>
+                        <a class="nav-link" asp-controller="Home"asp-action="CreateAccount">Create account</a>
                     </li>
                     <li class="nav-item">
                         @*<a class="nav-link disabled">Our Learning</a>*@
@@ -130,9 +130,9 @@
                            aria-haspopup="true" aria-expanded="false">Users</a>
 
                         <div class="dropdown-menu" aria-labelledby="Users">
-                            <a class="dropdown-item" href="#">HOD</a>
-                            <a class="dropdown-item" href="#">Subject coordinator</a>
-                            <a class="dropdown-item" href="#">Lecturer</a>
+                            <a class="dropdown-item" asp-controller="Home" asp-action="HodLogin">HOD</a>
+                            <a class="dropdown-item" asp-controller="Home"asp-action="SubCoLogin">Subject coordinator</a>
+                            <a class="dropdown-item" asp-controller="Home"asp-action="LecturerLogin">Lecturer</a>
                              <a class="dropdown-item" href="#">Student</a>
                             <a class="dropdown-item" href="#">Sponsor</a>
                        </div>
@@ -154,7 +154,7 @@
     </div>
 
     <header class="hero">
-
+        
         <div class="container spacing">
             <h1 class="primary-title">Mission statement</h1>
             <p>

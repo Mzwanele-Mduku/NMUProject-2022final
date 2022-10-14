@@ -22,12 +22,28 @@ namespace Innovators.Controllers
         {
             return View();
         }
+        public IActionResult CreateAccount()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {
             return View();
         }
-       public IActionResult UserSelect()
+        public IActionResult HodLogin()
+        {
+            return View();
+        }
+        public IActionResult LecturerLogin()
+        {
+            return View();
+        }
+        public IActionResult SubCoLogin()
+        {
+            return View();
+        }
+        public IActionResult UserSelect()
         {
             return View();
         }

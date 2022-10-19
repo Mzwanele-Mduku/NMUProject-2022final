@@ -18,6 +18,10 @@ namespace Innovators.Controllers
             _logger = logger;
         }
 
+        public IActionResult CourseLogin()
+        {
+            return View();
+        }
         public IActionResult Index()
         {
             return View();

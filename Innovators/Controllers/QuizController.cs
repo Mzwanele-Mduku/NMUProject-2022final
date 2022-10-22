@@ -13,7 +13,11 @@ namespace Innovators.Controllers
         {
             _db = db;
         }
+        public IActionResult Live()
+        {
 
+            return View();
+        }
         public IActionResult Memo()
         {
 

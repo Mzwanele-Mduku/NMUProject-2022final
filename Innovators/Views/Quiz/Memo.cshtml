@@ -3,7 +3,7 @@
 <div class="container p-3">
     <div class="row pt-4">
         <div class="col-6">
-            <h2 class="text-primary">Quiz</h2>
+            <h2 class="text-primary">Memo</h2>
         </div>
         <div class="col-6 text-right">
             
@@ -11,6 +11,12 @@
 
 @*            <a asp-controller="Quiz" asp-action="QuizCreate" class="btn btn-primary">Create New Quiz</a>
 *@        </div>
+        <div class="col-6 text-right">
+
+            <input type="button" class="btn btn-primary" asp-action="Index" asp-controller="Lecturer" value="Back"/>
+            @*            <a asp-controller="Quiz" asp-action="QuizCreate" class="btn btn-primary">Create New Quiz</a>
+            *@
+        </div>
     </div>
     <br />
 

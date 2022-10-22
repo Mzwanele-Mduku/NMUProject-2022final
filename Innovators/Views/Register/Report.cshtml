@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Innovators.Models.Register>
+
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Register</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-controller="Register" asp-action="Index" class="btn btn-primary">Back</a>
+        </div>
+        <input type="button" class="btn btn-primary" value="Print" onclick="window.print()" />
+        <input type="button" class="btn btn-primary" value="Save as PDF" onclick="window.print()" />
+
+
+      
+
+    </div>
+    <br />
+
+    @if (Model.Count() > 0)
+    {
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        Date
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Attended
+                    </th>
+                    <th>
+                        Ubsent
+                    </th>
+                    <th>
+                        If Absent,Reason
+                    </th>
+                    <th>
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var r in Model)
+                {
+                    <tr>
+                        <td width="30%">@r.Date</td>
+                        <td width="30%">@r.StudentName</td>
+                        <td width="30%">@r.Attended</td>
+                        <td width="30%">@r.Absent</td>
+                        <td width="30%">@r.StudentSurname</td>
+                        <td>
+                        </td>
+                        @*<td width="30%">
+                            <div class="w-100 btn-group" role="group">
+                                <a asp-controller="Register" asp-action="UpdateRegister" asp-route-ID="@r.RegId" class="btn btn-primary mx-1">Update</a>
+                                <a asp-controller="Lecturer" asp-action="DeleteRegister" asp-route-ID="@r.RegId" class="btn btn-danger mx-1">Delete</a>
+                            </div>
+                        </td>*@
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No Report created yet</p>
+    }
+</div>
+
+
+
+
+                              
+

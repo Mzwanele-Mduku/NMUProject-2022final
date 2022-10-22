@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Innovators.Models.QuizModel>
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Quiz</h2>
+        </div>
+        <div class="col-6 text-right">
+            
+                <input type="button" class="btn btn-primary" value = "Save Memo" onclick = "window.print()" />
+
+@*            <a asp-controller="Quiz" asp-action="QuizCreate" class="btn btn-primary">Create New Quiz</a>
+*@        </div>
+    </div>
+    <br />
+
+    @if (Model.Count() >0)
+    {
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        Question 1
+                    </th>
+                    <th>
+                        Question 2
+                    </th>
+                    <th>
+                        Question 3
+                    </th>
+                    <th>
+                        Question 4
+                    </th>
+                    <th>
+                        Question 5
+                    </th>
+                    <th>
+                        Mark
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var QuizModel in Model)
+                {
+                    <tr>
+                        <td width="30%">@QuizModel.Memo1</td>
+                        <td width="30%">@QuizModel.Memo2</td>
+                        <td width="30%">@QuizModel.Memo3</td>
+                        <td width="30%">@QuizModel.Memo4</td>
+                        <td width="30%">@QuizModel.Memo5</td>
+                        <td>
+                        </td>
+                        <td width="30%">
+                            <div class="w-100 btn-group" role="group">
+                                <a asp-controller="Quiz" asp-action="UpdateQuiz" asp-route-ID="@QuizModel.QuizId" class="btn btn-primary mx-1">Update Memo </a>
+                                <a asp-controller="Lecturer" asp-action="DeleteTask" asp-route-ID="@QuizModel.QuizId" class="btn btn-danger mx-1">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No Quiz created yet</p>
+    }
+</div>

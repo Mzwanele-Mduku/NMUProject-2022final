@@ -1,0 +1,215 @@
+﻿@model Innovators.Models.QuizModel
+
+
+<form enctype="multipart/form-data" method="post" asp-action="QuizCreate">
+    <div class="border p-3">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">Add Task</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group row">
+                    <div class="col-6">
+                        <label asp-for="Q1"></label>@*These names come from our properties in the model *@
+                    </div>
+                    <div class="col-6">
+                        <label asp-for="Q2"></label>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-6">
+                        <input asp-for="Q1" class="form-control" />
+
+                    </div>
+                    <div class="col-6">
+                        <input asp-for="Q2" class="form-control" />
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label asp-for="Q3"></label>@*These names come from our properties in the model *@
+                            </div>
+                            <div class="col-6">
+                                <label asp-for="Q4"></label>
+                            </div>
+
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <input asp-for="Q3" class="form-control" />
+
+                            </div>
+                            <div class="col-6">
+                                <input asp-for="Q4" class="form-control" />
+                            </div>
+
+                        </div>
+
+
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group row">
+                                    <div class="col-6">
+                                        <label asp-for="Q5"></label>@*These names come from our properties in the model *@
+                                    </div>
+
+
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-6">
+                                        <input asp-for="Q5" class="form-control" />
+
+                                    </div>
+
+
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+                                <div class="form-group row">
+                                    <div class="col-8 offset-2 row">
+                                        <div class="col">
+                                            <input type="submit" class="btn btn-info w-75" value="QuizCreate" />
+                                        </div>
+                                        <div class="col">
+                                            <a asp-action="Index" class="btn btn-danger w-75">Back</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group row">
+                                    <div class="col-6">
+                                        <label asp-for="Memo1"></label>@*These names come from our properties in the model *@
+                                    </div>
+                                    <div class="col-6">
+                                        <label asp-for="Memo2"></label>
+                                    </div>
+
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-6">
+                                        <input asp-for="Memo1" class="form-control" />
+
+                                    </div>
+                                    <div class="col-6">
+                                        <input asp-for="Memo2" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group row">
+                                    <div class="col-6">
+                                        <label asp-for="Memo3"></label>@*These names come from our properties in the model *@
+                                    </div>
+                                    <div class="col-6">
+                                        <label asp-for="Memo4"></label>
+                                    </div>
+
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-6">
+                                        <input asp-for="Memo3" class="form-control" />
+
+                                    </div>
+                                    <div class="col-6">
+                                        <input asp-for="Memo4" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        @*
+                        <div class="input-group">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupFileAddon01"></span>
+                        </div>
+                        <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile01"
+                        aria-describedby="inputGroupFileAddon01">
+                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        <input asp-for="Document" />
+                        </div>
+                        </div>*@
+
+
+                        @*<div class="row">
+                        <div class="col-12">
+                        <div class="custom-file">
+                        <div class="col-6">
+                        <label asp-for="Document" class="form-control custom-file-input active"></label>@*These names come from our properties in the model *@
+                        @* <label class="custom-file-label">Choose File...</label>
+                        </div>
+
+                        <div class="col-6">
+                        <input asp-for="Document" class="form-control" />
+                        <span asp-validation-for="Document" class="text-danger"></span>
+                        </div>
+                        </div>
+                        </div>
+                        </div>*@
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</form>
+
+@section Scripts{
+
+    <script>
+        $('.file-upload').file_upload();
+    </script>
+
+
+    @* <script>
+        $(document).ready(function () {
+            $('.costom-file-input').on("change", function () {
+                var fileName = $(this).val().split("\\").pop();
+                $(this).next('.custom-file-label').html(fileName);
+            })
+        })
+    </script>*@
+
+
+
+    }

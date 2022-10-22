@@ -1,4 +1,6 @@
-﻿using Innovators.Models;
+﻿using Innovators.Data;
+using Innovators.Migrations;
+using Innovators.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,6 +14,8 @@ namespace Innovators.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+       
+       
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -39,14 +43,28 @@ namespace Innovators.Controllers
         {
             return View();
         }
+        [HttpGet]
         public IActionResult LecturerLogin()
         {
+            
             return View();
+
+
+
+           
         }
+        
+       
         public IActionResult SubCoLogin()
         {
             return View();
         }
+       
+        public IActionResult Registration()
+        {
+            return View();
+        }
+       
         public IActionResult UserSelect()
         {
             return View();

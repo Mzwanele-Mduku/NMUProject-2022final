@@ -1,0 +1,132 @@
+﻿@using System.Collections
+@model Innovators.Models.Users
+
+
+<form method="post" asp-action="Index">
+    <div class="border p-3">
+        <div asp-vali dation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">Register</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group row">
+                    <div class="col-6">
+                        <label asp-for="UserName"></label>@*These names come from our properties in the model *@
+                    </div>
+                    <div class="col-6">
+                        <label asp-for="UserSurname"></label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-6">
+                        <input asp-for="UserName" class="form-control" />
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+
+                    </div>
+                    <div class="col-6">
+                        <input asp-for="UserSurname" class="form-control" />
+                        <span asp-validation-for="UserSurname" class="text-danger"></span>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+
+
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group row">
+                    <div class="col-6">
+                        <label asp-for="Email"></label>@*These names come from our properties in the model *@
+                    </div>
+                     <div class="col-6">
+                        <label asp-for="Password"></label>@*These names come from our properties in the model *@
+                    </div>
+                   @* <div class="col-6">
+                        <label asp-for="Gender"></label>
+                    </div>*@
+                </div>
+                <div class="form-group row">
+                    <div class="col-6">
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+
+                    </div>
+                     <div class="col-6">
+                        @*@Html.Password("Password")*@
+                        @*@Html.PasswordFor(m=>m.Password)*@
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+
+                    </div>
+                   
+                    @*<div class="col-6">
+                        <input asp-for="Gender" class="form-control" />
+                        <span asp-validation-for="Gender" class="text-danger"></span>*@
+                   @* </div>*@
+                    </div>
+                    </div>
+                    </div>
+
+
+
+
+
+
+       
+                        @*@Html.DropDownList("roles",null,new {OnChange="document.location.href='/Authentication/Index?value='+this.value;"})*@
+                        
+                      
+
+
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group row">
+                    
+                    @*<div class="col-6">
+                        <label asp-for="UserSurname"></label>
+                    </div>*@
+                </div>
+                <div class="form-group row">
+                   
+                    @*<div class="col-6">
+                        <input asp-for="UserSurname" class="form-control" />
+                        <span asp-validation-for="UserSurname" class="text-danger"></span>
+                    </div>*@
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group row">
+
+                    <div class="col">
+                        
+                        
+                           <input id="submit" type="submit" class="btn btn-info w-75" value="Register"  />
+
+                    </div>
+                    
+                    <div class="col">
+                        <a asp-action="CourseLogin" asp-controller="Home" class="btn btn-danger w-75">Back</a>
+                    </div>
+                </div>
+                 
+            </div>
+        </div>
+
+
+        
+        
+           
+        
+
+
+
+    </div>
+                    </form>
+                    

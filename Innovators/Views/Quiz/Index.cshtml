@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Innovators.Models.QuizModel>
+<h1>Quiz Creator</h1>
+<hr />
+<p>
+    You will be asked to enter questions and answers. The system will allow you to view your Questions and correct answers,
+</p>
+<p>
+    After submission, the student will not be able to see the answers only the questions and a field to answer.
+</p>
+<p>
+    You have an option to mark the quiz manually or the system can mark.
+</p>
+
+<br/>
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Quiz</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-controller="Quiz" asp-action="QuizCreate" class="btn btn-primary">Create New Quiz</a>
+        </div>
+    </div>
+    <br />
+
+    @if (Model.Count() > 0)
+    {
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        Q1
+                    </th>
+                    <th>
+                        Q2
+                    </th>
+                    <th>
+                        Q3
+                    </th>
+                    <th>
+                        Q4
+                    </th>
+                    <th>
+                        Q5
+                    </th>
+                    <th>
+                        Mark
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var QuizModel in Model)
+                {
+                    <tr>
+                        <td width="30%">@QuizModel.Q1</td>
+                        <td width="30%">@QuizModel.Q2</td>
+                        <td width="30%">@QuizModel.Q3</td>
+                        <td width="30%">@QuizModel.Q4</td>
+                        <td width="30%">@QuizModel.Q5</td>
+                        <td>
+                        </td>
+                        <td width="30%">
+                            <div class="w-100 btn-group" role="group">
+                                <a asp-controller="Quiz" asp-action="UpdateQuiz" asp-route-ID="@QuizModel.QuizId" class="btn btn-primary mx-1">Update Question </a>
+                                <a asp-controller="Lecturer" asp-action="DeleteTask" asp-route-ID="@QuizModel.QuizId" class="btn btn-danger mx-1">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No Quiz created yet</p>
+    }
+</div>

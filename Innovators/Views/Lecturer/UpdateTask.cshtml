@@ -1,0 +1,91 @@
+﻿@model Innovators.Models.Task
+
+<form method="post" asp-action="UpdateTask">
+    <input asp-for="TaskId" hidden />
+    <div class="border p-3">
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">Update Task</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group row">
+                    <div class="col-6">
+                        <label asp-for="TaskName"></label>@*These names come from our properties in the model *@
+                    </div>
+                    <div class="col-6">
+                        <label asp-for="TaskDescription"></label>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-6">
+                        <input asp-for="TaskName" class="form-control" />
+                    </div>
+                    <div class="col-6">
+                        <input asp-for="TaskDescription" class="form-control" />
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label asp-for="DueDate"></label>@*These names come from our properties in the model *@
+                            </div>
+                            <div class="col-6">
+                                <label asp-for="Status"></label>
+                            </div>
+
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <input asp-for="DueDate" class="form-control" />
+                            </div>
+                            <div class="col-6">
+                                <input asp-for="Status" class="form-control" />
+                            </div>
+
+                        </div>
+
+
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group row">
+                                    <div class="col-6">
+                                        <label asp-for="Document" class="form-control custom-file-input"></label>@*These names come from our properties in the model *@
+                                        <label class="custom-file-label">Choose File...</label>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <input asp-for="Document" class="form-control" />
+                                        <span asp-validation-for="Document" class="text-danger"></span>
+                                    </div>
+
+
+                <div class="form-group row">
+                    <div class="col-8 offset-2 row">
+                        <div class="col">
+                            <input type="submit" class="btn btn-info w-75" value="UpdateTask" />
+                        </div>
+                        <div class="col">
+                            <a asp-action="Index" class="btn btn-danger w-75">Back</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        </div>
+</div>    </div>
+</div>
+</div>
+</div>
+
+</form>
+
+

@@ -3,6 +3,7 @@ using Innovators.Migrations;
 using Innovators.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 
 namespace Innovators.Controllers
@@ -35,6 +36,7 @@ namespace Innovators.Controllers
             Users _users = new Users();
             return View(_users);
         }
+        
         [HttpPost]
         public IActionResult Login(Users _users)
         {

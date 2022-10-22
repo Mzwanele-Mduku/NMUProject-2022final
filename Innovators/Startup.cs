@@ -36,6 +36,8 @@ namespace Innovators
             //{
             //    cfg.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             //});
+            services.AddDbContext<RegisterDbContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddDbContext<QuizDbContext>(options =>
            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 

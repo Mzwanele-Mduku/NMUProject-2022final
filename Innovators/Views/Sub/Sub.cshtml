@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <title>Subject Coordinator Dashboard</title>
+    <link rel="stylesheet" href="~/css/Sub.css" />
+    <link rel="stylesheet" href="~/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/css/prism-okaidia.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bxl-c-plus-plus '></i>
+            <span class="log_name">iTutor</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="">
+                    <i class='bx bxs-grid-alt'></i>
+                    <span class="link_name">Dashboard</span>
+
+                </a>
+            </li>
+            <li>
+                <a asp-controller="AssignLecturer" asp-action="AssignLecturerDisplay">
+                    <i class='bx bxs-graduation'></i>
+                    <span class="link_name">Lecturers</span>
+
+                </a>
+            </li>
+            <li>
+                <a asp-controller="Sub" asp-action="Cal">
+                    <i class='bx bxs-message-dots'></i>
+                    <span class="link_name">Schedule Meetings</span>
+
+                </a>
+
+            </li>
+
+            <li>
+                <a asp-controller="Sub" asp-action="StudentProgress">
+                    <i class='bx bx-book-open'></i>
+                    <span class="link_name">Student Progress</span>
+
+                </a>
+            </li>
+            <li>
+                <a asp-controller="Home" asp-action="Index" class="nav-link">
+                    <i class="bx bx-log-out icon"></i>
+                    <span class="link">Logout</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- home-content -->
+    <section class="home-section">
+        <nav>
+            <div class="sidebar-button">
+                <i class='bx bx-menu sidebarBtn'></i>
+                <span class="dashboard">Dashboard </span>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search..." />
+                <i class='bx bx-search'></i>
+            </div>
+            <div class="profile-details">
+                <img src="~/Images/IMG_20211030_202641_729.webp" alt="">
+                <span class="subject_coordinator_name">Chuma Mhaga</span>
+                <i class='bx bx-chevron-down'></i>
+            </div>
+        </nav>
+        <!-- home-content -->
+        <div class="home-content">
+            <div class="overview-boxes">
+                <div class="box">
+                    <div class="left-side">
+                        <div class="box_topic">Reports</div>
+                        <div class="number"></div>
+                        <div class="indicator">
+                            <i class='bx bxs-up-arrow-alt'></i>
+                            <span class="text">Up from yesterday</span>
+                        </div>
+                    </div>
+                    <a asp-controller="Sub" asp-action="Report">
+                        <i class='bx bx-show-alt show'></i>
+
+                    </a>
+
+                </div>
+                <div class="box">
+                    <div class="left-side">
+                        <div class="box_topic">Schedule Meetings</div>
+                        <div class="number"></div>
+                        <div class="indicator">
+                            <i class='bx bxs-up-arrow-alt'></i>
+                            <span class="text">Up from yesterday</span>
+                        </div>
+                    </div>
+                    <a asp-controller="Sub" asp-action="Cal">
+
+                        <i class='bx bx-show-alt show two'></i>
+                    </a>
+
+
+                </div>
+                <div class="box">
+                    <div class="left-side">
+                        <div class="box_topic">Lecturers</div>
+                        <div class="number"></div>
+                        <div class="indicator">
+                            <i class='bx bxs-up-arrow-alt'></i>
+                            <span class="text">Up from yesterday</span>
+                        </div>
+                    </div>
+                    <a asp-controller="AssignLecturer" asp-action="AssignLecturerDisplay">
+
+                        <i class='bx bx-show-alt show three'></i>
+                    </a>
+                </div>
+                <div class="box">
+                    <div class="left-side">
+                        <div class="box_topic">Students</div>
+                        <div class="number"></div>
+                        <div class="indicator">
+                            <i class='bx bxs-up-arrow-alt'></i>
+                            <span class="text">Up from yesterday</span>
+                        </div>
+                    </div>
+
+                    <a asp-controller="Sub" asp-action="StudentProgress">
+                        <i class='bx bx-show-alt show four'></i>
+                    </a>
+                </div>
+
+            </div>
+
+
+    </section>
+    <script src="~/js/script.js"></script>
+    <script src="~/js/prism.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,80 @@
+﻿@model Innovators.Models.AssignLecturer
+@{
+    ViewData["Title"] = "AssignLecturers";
+}
+
+<h1>AssignLecturers</h1>
+<link rel="stylesheet" href="~/css/bootstrap.css" />
+
+<form method="post" asp-action="AssignLecturers">
+    <div class="border p-3">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">Assign Lecturers</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group row">
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <div class="col-4">
+                            <label asp-for="Name"></label>
+                        </div>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="col-4">
+                        <div class="col-4">
+                            <label asp-for="Surname"></label>
+                        </div>
+                        <input asp-for="Surname" class="form-control" />
+                        <span asp-validation-for="Surname" class="text-danger"></span>
+                    </div>
+                    <div class="col-4">
+                        <div class="col-4">
+                            <label asp-for="EmailAddress"></label>
+                        </div>
+                        <input asp-for="EmailAddress" class="form-control" />
+                        <span asp-validation-for="EmailAddress" class="text-danger"></span>
+                    </div>
+                    <div class="col-4">
+
+                        <div class="col-4">
+                            <label asp-for="Course"></label>
+                        </div>
+                        <input asp-for="Course" class="form-control" />
+                        <span asp-validation-for="Course" class="text-danger"></span>
+                    </div>
+                    <div class="col-4">
+                        <div class="col-4">
+                            <label asp-for="Module"></label>
+                        </div>
+                        <input asp-for="Module" class="form-control" />
+                        <span asp-validation-for="Module" class="text-danger"></span>
+                    </div>
+                    <div class="col-4">
+                        <div class="col-4">
+                            <label asp-for="CellNumber"></label>
+                        </div>
+                        <input asp-for="CellNumber" class="form-control" />
+                        <span asp-validation-for="CellNumber" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-8 offset-2 row">
+                        <div class="col">
+                            <input type="submit" class="btn btn-info w-75" value="Create" asp-controller="AssignLecturer" asp-action="AssignLecturerDisplay" />
+                        </div>
+                        <div class="col">
+                            <a asp-area="" asp-action="AssignLecturerDisplay" asp-controller="AssignLecturer" class="btn btn-danger w-75">Back</a>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
+

@@ -1,0 +1,110 @@
+﻿
+@{
+    ViewData["Title"] = "Report";
+}
+
+<h1>Report</h1>
+<link rel="stylesheet" href="~/css/bootstrap.css" />
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="kiosk.css" type="text/css">
+    <script language="JavaScript">
+                <!--
+        function MM_goToURL() { //v3.0
+            var i, args = MM_goToURL.arguments; document.MM_returnValue = false;
+            for (i = 0; i < (args.length - 1); i += 2) eval(args[i] + ".location='" + args[i + 1] + "'");
+        }
+
+        function NMM_goToURL() { //v3.0
+            var i, args = NMM_goToURL.arguments; document.NMM_returnValue = false;
+            for (i = 0; i < (args.length - 1); i += 2) eval(args[i] + ".location='" + args[i + 1] + "'");
+            alert('This report has been printed. Please wait for it to emerge from the printer slot.');
+        }
+
+
+        //-->
+    </script>
+</head>
+<div id="parentDiv" style="width:500px">
+    <body bgcolor="#FFFFFF" text="#000000">
+        <table width="100%" border="0">
+            <tr>
+
+                <td class="main_header">Student Report</td>
+                <td width="120px" align="right"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><h3 class="mid_header">Examination Results </h3></td>
+                <td align="right"><input type="button" name="Button" value="Back" onClick="history.back()" class="back_button"></td>
+
+            </tr>
+        </table>
+
+        <table border="0">
+            <tr height="1px" class="table_divline">
+                <td height="1px" colspan="100"></td>
+            </tr>
+            <tr><td class="table_header">Name</td><td class="table_cell_even" colspan="5">Bathini</td></tr>
+            <tr><td class="table_header">Surname</td><td class="table_cell_even" colspan="5">Buso</td></tr>
+            <tr><td class="table_header">Student No.</td><td class="table_cell_even" colspan="5">223465789</td></tr>
+            <tr><td class="table_header">Course</td><td class="table_cell_even" colspan="5">Information Technology</td></tr>
+
+            <tr height="1px" class="table_divline">
+                <td height="1px" colspan="100"></td>
+            </tr>
+            <tr>
+                <td class="table_header" width="80">Module</td>
+                <td class="table_header" width="80">Course</td>
+                <td class="table_header" width="80">Name</td>
+                <td class="table_header" width="80">Surname</td>
+                <td class="table_header" width="80">Student Number</td>
+                <td class="table_header" width="100">Test 1</td>
+                <td class="table_header" width="80">Test 2</td>
+                <td class="table_header" width="80">Test 3</td>
+                <td class="table_header" width="80">Average</td>
+            </tr>
+            <tr height="1px" class="table_divline">
+                <td height="1px" colspan="100"></td>
+            </tr>
+            <tr class="table_cell_even"><td>Programming</td><td>Infomation Technology</td><td>Bathini</td><td>Buso</td><td>223465789</td><td></td><td>60</td><td>80</td><td>67</td><td>69</td></tr>
+
+            <!--
+                <p class="normal_text">PLEASE NOTE:  </p>
+                <p class="normal_text">Provisional Examination Results will be published on 27 June 2014 at the end of the day.</p>
+                <p class="normal_text">Re-Examination Time-table will be published on 7 July 2014 at the end of the day.</p>
+                <p class="normal_text">All students qualifying for Last Outstanding Examinations will be published on 7 July 2014 at the end of the day.</p>
+                <p class="normal_text">&#8226;    Should you be of the opinion that you should qualify and it is not indicated as such at this date, please contact your Faculty Admin staff member on 8 July 2014 only.</p>
+                //-->
+
+    </body>
+</html>
+<a href="javascript:generatePDF()" id="downloadButton">Click to download</a>
+</div>
+<script>
+    async function generatePDF() {
+        document.getElementById("downloadButton").innerHTML = "";
+
+        //Downloading
+        var downloading = document.getElementById("parentDiv");
+        var doc = new jsPDF('p', 'pt', 'a4');
+
+        await html2canvas(downloading, {
+            allowTaint: true,
+            useCORS: true,
+            width: 2000
+        }).then((canvas) => {
+            //Canvas (convert to PNG)
+            doc.addImage(canvas.toDataURL("pdf/pdf"), 'PDF', 0, 0, 1500, 200);
+        })
+
+        doc.save("ProgressReport.pdf");
+
+        //End of downloading
+
+        document.getElementById("downloadButton").innerHTML = "";
+    }
+</script>

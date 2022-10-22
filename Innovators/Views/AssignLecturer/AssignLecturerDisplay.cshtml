@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewData["Title"] = "AssignLecturerDisplay";
+}
+
+<link rel="stylesheet" href="~/css/bootstrap.css" />
+@model IEnumerable<Innovators.Models.AssignLecturer >
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Lecturers</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-controller="Sub" asp-action="AssignLecturers" class="btn btn-primary">Create New Item</a>
+        </div>
+    </div>
+    <br />
+
+    @if (Model.Count() > 0)
+    {
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Surname
+                    </th>
+                    <th>
+                        Email Address
+                    </th>
+                    <th>
+                        Course
+                    </th>
+                    <th>
+                        Module
+                    </th>
+                    <th>
+                        Cell Number
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var assignLecturer in Model)
+                {
+                    <tr>
+                        <td width="30%">@assignLecturer.Name</td>
+                        <td width="30%">@assignLecturer.Surname</td>
+                        <td width="30%">@assignLecturer.EmailAddress</td>
+                        <td width="30%">@assignLecturer.Course</td>
+                        <td width="30%">@assignLecturer.Module</td>
+                        <td width="30%">@assignLecturer.CellNumber</td>
+                             <td width="30%">
+
+                                 <div class="w-100 btn-group" role-"group">
+
+                                <a asp-controller="AssignLecturer" asp-action="UpdateLecturer" asp-route-ID="@assignLecturer.LecturerId" class="edit" title="Edit" data-toggle="tooltip">
+                                        <i class="material-icons">&#xE2254;</i>Update</a>
+                                 </div>
+                             </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No Items created yet</p>
+    }
+    <div />
+    <div class="row pt-4">
+        <div class="col-6 text-left">
+            <a asp-controller="Sub" asp-action="Sub" class="btn btn-danger" type="button">Back</a>
+        </div>
+
+

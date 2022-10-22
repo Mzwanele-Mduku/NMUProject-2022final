@@ -1,0 +1,74 @@
+﻿<link rel="stylesheet" href="~/css/bootstrap.css" />
+@model Innovators.Models.AssignLecturer
+@{
+    ViewData["Title"] = "UpdateLecturer";
+}
+
+<h1>UpdateLecturer</h1>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success" role="alert">
+        @ViewBag.Message
+    </div>
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new{@class ="text-danger"})
+        @Html.HiddenFor(model => model.LecturerId )
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new{@class ="control-label col-md-6"})
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.Name, new{htmlAttributes = new {@class = "control-label col-md-6"}})
+            </div>
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Surname , htmlAttributes: new{@class ="control-label col-md-6"})
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.Surname , new{htmlAttributes = new {@class = "control-label col-md-6"}})
+                @Html.ValidationMessageFor(model=>model.Surname ,"",new {@class="text-danger"})
+            </div>
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Course, htmlAttributes: new{@class ="control-label col-md-6"})
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.Course, new{htmlAttributes = new {@class = "control-label col-md-6"}})
+                @Html.ValidationMessageFor(model=>model.Course,"",new {@class="text-danger"})
+            </div>
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Module, htmlAttributes: new{@class ="control-label col-md-6"})
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.Module, new{htmlAttributes = new {@class = "control-label col-md-6"}})
+                @Html.ValidationMessageFor(model=>model.Module,"",new {@class="text-danger"})
+            </div>
+
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.CellNumber, htmlAttributes: new{@class ="control-label col-md-6"})
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.CellNumber, new{htmlAttributes = new {@class = "control-label col-md-6"}})
+                @Html.ValidationMessageFor(model=>model.CellNumber,"",new {@class="text-danger"})
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <div class="col-8 offset-2 row">
+                <div class="col">
+                    <input type="submit" class="btn btn-default" value="Save" />
+                </div>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,85 @@
+﻿<link rel="stylesheet" href="~/css/bootstrap.css" />
+@model IEnumerable<Innovators.Models.CivilEngineering>
+@{
+    ViewData["Title"] = "CivilEngineering";
+}
+
+<h1>CivilEngineering</h1>
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Subject Coordinators List</h2>
+        </div>
+        @*<div class="col-6 text-right">
+        <a asp-controller="SubController" asp-action="AddCoordinator" class="btn btn-primary">Add New Coordinator</a>
+        </div>*@
+    </div>
+    <br />
+
+    @if (Model.Count() > 0)
+    {
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        Module
+                    </th>
+                    <th>
+                        Course
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Surname
+                    </th>
+                    <th>
+                        Student Number
+                    </th>
+                    <th>
+                        Test 1
+                    </th>
+                    <th>
+                        Test 2
+                    </th>
+                    <th>
+                        Test 3
+                    </th>
+                    <th>
+                        Average
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var add in Model)
+                {
+                    <tr>
+                        <td width="30%">@add.ModuleName</td>
+                        <td width="30%">@add.Course</td>
+                        <td width="30%">@add.StudentName</td>
+                        <td width="30%">@add.StudentSurname</td>
+                        <td width="30%">@add.StudentNumber</td>
+                        <td width="30%">@add.Test1</td>
+                        <td width="30%">@add.Test2</td>
+                        <td width="30%">@add.Test3</td>
+                        <td width="30%">@add.Average</td>
+
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No Coordinator added</p>
+    }
+</div>
+<div class="row pt-4">
+    <div class="col-6 text-left">
+        <a asp-controller="Sub" asp-action="StudentProgress" class="btn btn-danger" type="button">Back</a>
+    </div>
+
+</div>

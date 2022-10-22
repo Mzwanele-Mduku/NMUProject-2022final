@@ -1,0 +1,653 @@
+﻿* {
+    
+}
+.content {
+    position: relative;
+    margin-top: 5vh;
+    min-height: 75vh;
+    box-sizing:border-box;
+    box-shadow:none;
+    
+}
+ .content .cards {
+        padding: 20px 15px;
+        display:inline-block;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+}
+
+.content .cards .card {
+            width: 350px;
+            height: 200px;
+            background:white;
+            margin: 20px 10px;
+            display:inline-block;
+            align-items: center;
+            justify-content: space-around;
+            box-shadow: 0 4px 8px 0 aqua;
+ }
+.icon-case {
+    position:center;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:50%;
+
+
+     
+}
+h1 {
+    
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+h3 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px
+}
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color:aqua;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+ .hero-btn:hover {
+        border: 1px solid aqua;
+        background: aqua;
+        transition: 1s;
+    }
+   /* width: 150px;
+    height: 45px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    color:white;
+    background-color:aqua;
+    border-block-color:#fff;
+    bottom:50%;
+    position:center;*/
+
+.icon-case img{
+    position:center;
+    display:flex;
+    justify-content:center;
+}
+h3 {
+    text-align: center;
+    font-size: 22px;
+}
+.activity{
+height: 50vh;
+width: 100%;
+background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(../Educator/Activities.jpg);
+background-position: center;
+background-size: cover;
+text-align: center;
+color: #fff3f3;
+}
+/*Activities*/
+* {
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.activity-col {
+    flex-basis: 31%;
+    background: #0094ff;
+    border-radius: 20px;
+    margin-bottom: 20%;
+    padding: 100px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    text-decoration: solid;
+}
+
+h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.activity {
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../Educator/Activities.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff3f3;
+}
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    nav img {
+        width: 150px;
+    }
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+    .nav-links ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+    }
+
+        .nav-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .nav-links ul li::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+     /*   foundation*/
+.foundation-cont {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.foundation-col {
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+
+}
+
+    .foundation-cont img {
+        width: 80%;
+        border-radius: 10px;
+        display: block;
+    }
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1em;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+    .row > * {
+        -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+        min-width: 15em;
+    }
+
+.spacing > * + * {
+    margin-top: var(--spacer, 2rem);
+}
+
+.h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    text-decoration: solid;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('\Educator\activities.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    nav img {
+        width: 150px;
+    }
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+    .nav-links ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+    }
+
+        .nav-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .nav-links ul li::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+
+
+
+    .layer:hover h3 {
+        bottom: 49%;
+        opacity: 1;
+    }*/
+      /*  Intermediate*/
+.inter-cont {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.inter-col {
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+    .inter-cont img {
+        width: 80%;
+        border-radius: 10px;
+        display: block;
+    }
+
+.h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    text-decoration: solid;
+}
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('\Educator\activities.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    nav img {
+        width: 150px;
+    }
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+    .nav-links ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+    }
+
+        .nav-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .nav-links ul li::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+.row{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1em;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+    .row > * {
+        -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+        min-width: 15em;
+    }
+
+.spacing > * + * {
+    margin-top: var(--spacer, 2rem);
+}
+.Inter_Activities{
+    float:left;
+    text-align:left;
+    padding-right:10px;
+}
+/* Senior*/
+.sen-cont {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.sen-col {
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+    .sen-col img {
+        width: 80%;
+        border-radius: 10px;
+        display: block;
+    }
+
+.h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    text-decoration: solid;
+}
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('\Educator\activities.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    nav img {
+        width: 150px;
+    }
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+    .nav-links ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+    }
+
+        .nav-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .nav-links ul li::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }     
+        /*Found-Activities*/
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1em;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+    .row > * {
+        -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+        min-width: 15em;
+    }
+
+.spacing > * + * {
+    margin-top: var(--spacer, 2rem);
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('\Educator\activities.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    nav img {
+        width: 150px;
+    }
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+    .nav-links ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+    }
+
+        .nav-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .nav-links ul li::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+        .Found-Act{
+            float:left;
+            text-align:left;
+            padding-right:10px;
+        }
+        h3{
+            text-align:left;
+        }
+        h2{
+            text-align:center;
+        }
+      /*  Register*/
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('\Educator\activities.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+/*SENIOR ACTIVITIES*/
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('\Educator\activities.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    nav img {
+        width: 150px;
+    }
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+    .nav-links ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+    }
+
+        .nav-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .nav-links ul li::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #f44336;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1em;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+    .row > * {
+        -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+        min-width: 15em;
+    }
+
+.spacing > * + * {
+    margin-top: var(--spacer, 2rem);
+}
+
+       /*Picture Layer*/
+
